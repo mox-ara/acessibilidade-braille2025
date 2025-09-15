@@ -2,44 +2,114 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-s1.0">
-    <title>Comércio de Produtos em Braille</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade em Braille</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Loja Braille Acessível</h1>
-        <p>Produtos de alta qualidade para leitura e escrita em Braille.</p>
+    <header class="cabecalho">
+        <div class="container">
+            <h1>A Acessibilidade em Braille</h1>
+            <p>Seu acesso à informação e à comunicação.</p>
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="#sobre">Sobre a Loja</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#pedidos">Pedidos</a></li>
+                    <li><a href="#cadastro">Cadastro</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        
-        <section id="reglete-negativa" class="product-section">
-            <h2>Reglete Negativa</h2>
-            <img src="img/reglete-negativa.jpg" alt="Reglete negativa">
-            <p>A reglete negativa é uma ferramenta essencial para a escrita em Braille, permitindo a punção dos pontos de forma invertida, para que a leitura seja feita de forma correta e sem emendas.</p>
+    <main>
+        <section id="sobre" class="secao-sobre">
+            <div class="container">
+                <h2>Sobre a Loja</h2>
+                <p>A acessibilidade em braille é o acesso à informação e à comunicação para pessoas com deficiência visual, permitindo a leitura e escrita através do sistema tátil de pontos em relevo. Ele é essencial para a inclusão social, educação, trabalho e autonomia, sendo aplicado em livros, sinalização, embalagens e tecnologias digitais, embora ainda haja desafios para a sua plena implementação na sociedade.</p>
+            </div>
         </section>
 
-        <section id="reglete-positiva" class="product-section">
-            <h2>Reglete Positiva</h2>
-            <img src="img/reglete-positiva.jpg" alt="Reglete positiva">
-            <p>A reglete positiva é utilizada por estudantes e profissionais para a escrita em Braille de forma mais direta, com a punção dos pontos na mesma direção da leitura, proporcionando maior agilidade e praticidade.</p>
+        <section id="produtos" class="secao-produtos">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                <div class="grid-produtos">
+                    <article class="card-produto">
+                        <img src="img/reglete-negativa.jpg" alt="Reglete negativa">
+                        <h3>Reglete Negativa</h3>
+                        <p>Ferramenta de escrita braille. Preço: R$ 50,00</p>
+                    </article>
+                    <article class="card-produto">
+                        <img src="img/reglete-positiva.jpg" alt="Reglete positiva">
+                        <h3>Reglete Positiva</h3>
+                        <p>Ferramenta de escrita braille. Preço: R$ 55,00</p>
+                    </article>
+                    <article class="card-produto">
+                        <img src="img/abaco.jpg" alt="Ábaco">
+                        <h3>Ábaco</h3>
+                        <p>Instrumento de cálculo. Preço: R$ 40,00</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section id="abaco" class="product-section">
-            <h2>Ábaco</h2>
-            <img src="img/abaco.jpg" alt="Ábaco">
-            <p>O ábaco é um instrumento de cálculo fundamental para o desenvolvimento da matemática para pessoas cegas. Nosso ábaco foi projetado com pinos táteis e de alta durabilidade, garantindo precisão e facilidade de uso.</p>
+        <section id="pedidos" class="secao-pedidos">
+            <div class="container">
+                <h2>Acompanhar Pedido</h2>
+                <form action="#" method="POST" class="form-pedido">
+                    <label for="nome-pedido">Nome Completo:</label>
+                    <input type="text" id="nome-pedido" name="nome_pedido" required>
+                    
+                    <label for="cpf-pedido">CPF:</label>
+                    <input type="text" id="cpf-pedido" name="cpf_pedido" required>
+
+                    <label for="numero-pedido">Número do Pedido:</label>
+                    <input type="text" id="numero-pedido" name="numero_pedido" required>
+
+                    <button type="submit">Verificar Pedido</button>
+                </form>
+            </div>
         </section>
 
-    </div>
+        <section id="cadastro" class="secao-cadastro">
+            <div class="container">
+                <h2>Cadastro do Cliente</h2>
+                <form action="#" method="POST" class="form-cadastro">
+                    <label for="nome-cadastro">Nome Completo:</label>
+                    <input type="text" id="nome-cadastro" name="nome_cadastro" required>
 
-    <footer>
-        <p>
-            E-mail para contato: acacio.zte@gmail.com | Fone: 87-99139-1472 | Petrolina-PE
-        </p>
-        <p>Direitos autorais: Acácio Rodrigues Andrade</p>
+                    <label for="email-cadastro">E-mail:</label>
+                    <input type="email" id="email-cadastro" name="email_cadastro" required>
+
+                    <label for="endereco-cadastro">Endereço:</label>
+                    <input type="text" id="endereco-cadastro" name="endereco_cadastro" required>
+
+                    <label for="telefone-cadastro">Telefone para Contato:</label>
+                    <input type="text" id="telefone-cadastro" name="telefone_cadastro" required>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contato" class="secao-contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>
+                    E-mail para contato: <a href="mailto:acacio.zte@gmail.com">acacio.zte@gmail.com</a>
+                </p>
+                <p>Fone: 87-99139-1472</p>
+                <p>Cidade: Petrolina-PE</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>Direitos autorais: Acácio Rodrigues Andrade</p>
+        </div>
     </footer>
 
 </body>
